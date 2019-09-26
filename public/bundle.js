@@ -105,7 +105,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$('.page-title')\r\n    .transition('pulse');\n\n//# sourceURL=webpack:///./src/js/animations.js?");
+eval("$('.header-title').transition({\r\n    animation: 'pulse',\r\n    duration: 1000,\r\n});\n\n//# sourceURL=webpack:///./src/js/animations.js?");
 
 /***/ }),
 

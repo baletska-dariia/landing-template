@@ -1,2 +1,4 @@
-$('.page-title')
-    .transition('pulse');
+$('.header-title').transition({
+    animation: 'pulse',
+    duration: 1000,
+});
