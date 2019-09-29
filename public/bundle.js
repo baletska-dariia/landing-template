@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_normalize_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/normalize.scss */ \"./src/styles/normalize.scss\");\n/* harmony import */ var _styles_normalize_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_normalize_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/base.scss */ \"./src/styles/base.scss\");\n/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _js_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/animations */ \"./src/js/animations.js\");\n/* harmony import */ var _js_animations__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_animations__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_normalize_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/normalize.scss */ \"./src/styles/normalize.scss\");\n/* harmony import */ var _styles_normalize_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_normalize_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/base.scss */ \"./src/styles/base.scss\");\n/* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _js_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/animations */ \"./src/js/animations.js\");\n/* harmony import */ var _js_animations__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_animations__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _js_handlers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/handlers */ \"./src/js/handlers.js\");\n/* harmony import */ var _js_handlers__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_handlers__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
@@ -106,6 +106,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ (function(module, exports) {
 
 eval("$('.header-title').transition({\r\n    animation: 'pulse',\r\n    duration: 1000,\r\n});\n\n//# sourceURL=webpack:///./src/js/animations.js?");
+
+/***/ }),
+
+/***/ "./src/js/handlers.js":
+/*!****************************!*\
+  !*** ./src/js/handlers.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("const scrollButton = document.getElementById('scroll-button');\r\nscrollButton.addEventListener('click', () => {\r\n    document.body.scrollTop = 0;\r\n    document.documentElement.scrollTop = 0;\r\n})\r\nwindow.addEventListener('scroll', () => {\r\n    document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ?\r\n        scrollButton.style.display = 'block' :\r\n        scrollButton.style.display = 'none'\r\n})\r\nconst contactBtn = document.getElementById('contact-us');\r\ncontactBtn.addEventListener('click', () => location.replace('#about'));\n\n//# sourceURL=webpack:///./src/js/handlers.js?");
 
 /***/ }),
 

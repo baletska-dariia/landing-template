@@ -36,6 +36,7 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
     $header-font: 'Montserrat', sans-serif !global;
     $sub-header-font: 'Merriweather', serif !global;
     $paragraph-font: 'Raleway', sans-serif !global;
@@ -47,6 +48,28 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+}
+
+.page__scroll-button {
+    cursor: pointer;
+    height: 4rem;
+    width: 4rem;
+    display: none;
+    position: fixed;
+    z-index: 3;
+    bottom: 2rem;
+    right: 3rem;
+    color: $font-color;
+    background-color: $font-color-accent;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    svg {
+        display: block;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin: 0 auto;
+    }
 }
 
 .page-header {
@@ -303,9 +326,7 @@ body {
             .about__text-content {
                 width: 100%;
                 margin: 3rem 0;
-                h2 {
-                    text-align: center;
-                }
+                text-align: center;
             }
         }
     }
