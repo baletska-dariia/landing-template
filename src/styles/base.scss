@@ -271,6 +271,7 @@ body {
             }
         }
         .about__text-content {
+            width: 50%;
             max-width: 30rem;
             font-family: $paragraph-font;
             letter-spacing: 0.8px;
@@ -287,17 +288,24 @@ body {
     }
 }
 
-@media (max-width: 1125px) {
-    .about__content {
-        width: 100%;
-        @include flex-column-between();
-        .about__image-outline {
-            display: none;
-        }
-        .about__text-content {
-            margin: 1rem 0;
-            h2 {
-                text-align: center;
+@media (max-width: 1290px) {
+    .about {
+        .about__content {
+            width: 100%;
+            padding: 1rem;
+            @include flex-column-between();
+            .about__image-content {
+                width: 90%;
+                .about__image-outline {
+                    display: none;
+                }
+            }
+            .about__text-content {
+                width: 100%;
+                margin: 3rem 0;
+                h2 {
+                    text-align: center;
+                }
             }
         }
     }
