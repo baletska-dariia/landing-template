@@ -302,34 +302,27 @@ template {
  */
 [hidden] {
   display: none; }
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth; }
-
-body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; }
-
-.page__scroll-button {
-  cursor: pointer;
-  height: 4rem;
-  width: 4rem;
-  display: none;
-  position: fixed;
-  z-index: 3;
-  bottom: 2rem;
-  right: 3rem;
+.section-header {
   color: rgba(0, 0, 0, 0.6);
-  background-color: #77efe5;
-  border: none;
-  border-radius: 50%;
-  outline: none; }
-  .page__scroll-button svg {
-    display: block;
-    height: 1.5rem;
-    width: 1.5rem;
-    margin: 0 auto; }
+  text-align: center;
+  text-transform: uppercase;
+  margin: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .section-header .section-header__main-header {
+    letter-spacing: 2.28px;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.3rem;
+    color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 0; }
+  .section-header .section-header__sub-header {
+    letter-spacing: 1.02px;
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    margin-top: 0.3rem; }
 
 .page-header {
   height: 100vh;
@@ -338,13 +331,12 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center; }
-
-.header-nav {
-  margin-top: -3rem;
-  width: 87%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  .page-header .page-header__header-nav {
+    margin-top: -3rem;
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
 .header-logo {
   width: 7rem;
@@ -367,7 +359,6 @@ body {
       letter-spacing: 1.26px;
       text-shadow: none; }
 
-/* Hamburger-Menu block */
 .header-menu .header-menu__menu-toggle {
   display: block;
   position: relative;
@@ -486,27 +477,6 @@ body {
       color: #fff;
       box-shadow: inset 14.5rem 0 0 0 rgba(0, 0, 0, 0.6); }
 
-.section-header {
-  color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .section-header .main-header {
-    letter-spacing: 2.28px;
-    font-weight: 800;
-    font-family: "Montserrat", sans-serif;
-    font-size: 2.3rem;
-    color: rgba(0, 0, 0, 0.9);
-    margin: 2rem 0.5rem 0; }
-  .section-header .sub-header {
-    letter-spacing: 1.02px;
-    font-family: "Merriweather", serif;
-    font-size: 1.2rem;
-    margin: 0.5rem 1rem; }
-
 .about {
   min-height: 100vh;
   height: 100%;
@@ -595,3 +565,32 @@ body {
   .header-contact .header-contact__button:hover {
     color: rgba(0, 0, 0, 0.6);
     box-shadow: none; } }
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
+
+.page .page__scroll-button {
+  cursor: pointer;
+  height: 4rem;
+  width: 4rem;
+  display: none;
+  position: fixed;
+  z-index: 3;
+  bottom: 2rem;
+  right: 3rem;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #77efe5;
+  border: none;
+  border-radius: 50%;
+  outline: none; }
+  .page .page__scroll-button svg {
+    display: block;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0 auto; }

@@ -1,0 +1,31 @@
+@media (max-width: 1290px) {
+    .about {
+        .about__content {
+            width: 100%;
+            padding: 1rem;
+            @include flex-column-between();
+            .about__image-content {
+                width: 90%;
+                .about__image-outline {
+                    display: none;
+                }
+            }
+            .about__text-content {
+                width: 100%;
+                margin: 3rem 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header-contact {
+        .header-contact__button {
+            &:hover {
+                color: $font-color;
+                box-shadow: none;
+            }
+        }
+    }
+}
