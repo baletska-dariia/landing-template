@@ -306,7 +306,7 @@ template {
   color: rgba(0, 0, 0, 0.6);
   text-align: center;
   text-transform: uppercase;
-  margin: 4rem 1rem;
+  margin: 10rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -544,6 +544,53 @@ template {
     .features .features__grid img {
       width: 100%; }
 
+.services {
+  min-height: 100vh;
+  height: 100%;
+  background-color: #f9fbfb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  .services .services__grid {
+    display: grid;
+    width: 60%;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(3, 380px);
+    grid-gap: 0.5rem; }
+    .services .services__grid .services__block_narrow_left {
+      grid-column: 4/6;
+      background-color: gray; }
+    .services .services__grid .services__block_narrow_right {
+      grid-column: 1/3;
+      background-color: gray; }
+    .services .services__grid .services__block_wide_left {
+      grid-column: 1/4;
+      background-color: gray; }
+    .services .services__grid .services__block_wide_right {
+      grid-column: 3/6;
+      background-color: gray; }
+    .services .services__grid .services__block_wide_blue {
+      grid-column: 1/4;
+      background-color: #6df6ebe7; }
+      .services .services__grid .services__block_wide_blue .services__text-content_black {
+        padding: 4.2rem 5rem; }
+        .services .services__grid .services__block_wide_blue .services__text-content_black p {
+          max-height: 12rem;
+          font-family: "Raleway", sans-serif;
+          font-size: 1rem;
+          line-height: 2rem;
+          letter-spacing: 0.4px;
+          opacity: 0.75;
+          color: #000000; }
+        .services .services__grid .services__block_wide_blue .services__text-content_black h2 {
+          font-family: "Merriweather", serif;
+          color: #000000;
+          opacity: 0.93;
+          letter-spacing: 1.2px;
+          font-size: 1.25rem;
+          text-transform: uppercase; }
+
 @media (max-width: 1290px) {
   .about .about__content {
     width: 100%;
@@ -562,9 +609,21 @@ template {
       text-align: center; } }
 
 @media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 5rem; }
   .header-contact .header-contact__button:hover {
     color: rgba(0, 0, 0, 0.6);
-    box-shadow: none; } }
+    box-shadow: none; }
+  .services .services__grid {
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(6, 380px); }
+    .services .services__grid .services__block_narrow_left,
+    .services .services__grid .services__block_narrow_right,
+    .services .services__grid .services__block_wide_left,
+    .services .services__grid .services__block_wide_right,
+    .services .services__grid .services__block_wide_blue {
+      grid-column: unset; } }
 
 * {
   box-sizing: border-box;

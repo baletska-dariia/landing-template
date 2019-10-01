@@ -2,7 +2,7 @@
     color: $font-color;
     text-align: center;
     text-transform: uppercase;
-    margin: 4rem 1rem;
+    margin: 10rem 1rem;
     @include flex-column-center();
     .section-header__main-header {
         letter-spacing: 2.28px;

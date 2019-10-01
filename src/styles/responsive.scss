@@ -20,11 +20,28 @@
 }
 
 @media (max-width: 768px) {
+    .section-header {
+        margin-bottom: 5rem;
+    }
     .header-contact {
         .header-contact__button {
             &:hover {
                 color: $font-color;
                 box-shadow: none;
+            }
+        }
+    }
+    .services {
+        .services__grid {
+            width: 90%;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-rows: repeat(6, 380px);
+            .services__block_narrow_left,
+            .services__block_narrow_right,
+            .services__block_wide_left,
+            .services__block_wide_right,
+            .services__block_wide_blue {
+                grid-column: unset;
             }
         }
     }

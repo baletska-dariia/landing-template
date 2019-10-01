@@ -10,3 +10,18 @@ window.addEventListener('scroll', () => {
 })
 const contactBtn = document.getElementById('contact-us');
 contactBtn.addEventListener('click', () => location.replace('#about'));
+
+
+function ellipsizeTextBox(className) {
+    let elements = document.getElementsByClassName(className);
+    [...elements].forEach(el => {
+        let wordArray = el.innerHTML.split(' ');
+        while (el.scrollHeight > el.offsetHeight) {
+            wordArray.pop();
+            el.innerHTML = wordArray.join(' ') + '...';
+        }
+    });
+}
+
+document.addEventListener('load', ellipsizeTextBox('text-ellipsis'));
+document.addEventListener('resize', ellipsizeTextBox('text-ellipsis'));
