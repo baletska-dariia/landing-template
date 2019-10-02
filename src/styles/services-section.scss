@@ -51,3 +51,10 @@
         }
     }
 }
+
+@each $bg-number,
+$bg-url in ( '1': '../../public/assets/services/5.jpg', '2': '../../public/assets/services/2.jpg', '3': '../../public/assets/services/4.jpg', '4': '../../public/assets/services/3.jpg', '5': '../../public/assets/services/1.jpg') {
+    #bg#{ $bg-number } {
+        @include fade-background($bg-url);
+    }
+}
