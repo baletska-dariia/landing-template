@@ -10,6 +10,11 @@ module.exports = {
     },
     module: {
         rules: [{
+                test: /\.(jpg|png|gif|svg)$/,
+                loader: 'image-webpack-loader',
+                enforce: 'pre'
+            },
+            {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
@@ -18,7 +23,8 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg)$/,
-                loader: 'url-loader'
+                loader: 'url-loader',
+
             }
         ]
     },

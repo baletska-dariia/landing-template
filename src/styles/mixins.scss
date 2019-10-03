@@ -32,6 +32,6 @@
 }
 
 @mixin fade-background($bg-url) {
-    background: no-repeat center/150%;
+    background: no-repeat center/cover;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url($bg-url);
 }

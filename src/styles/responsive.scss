@@ -17,6 +17,19 @@
             }
         }
     }
+    .block-content-wrapper {
+        padding-top: 4.2rem;
+    }
+}
+
+@media (max-width: 905px) {
+    .block-ref {
+        display: none;
+    }
+    .block-content-wrapper {
+        padding-top: 4.2rem;
+        max-height: 21rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -44,5 +57,15 @@
                 grid-column: unset;
             }
         }
+    }
+    .block-content-wrapper {
+        padding-top: 11.5rem;
+    }
+    .block-ref {
+        display: block;
+    }
+    .block-content-wrapper {
+        padding-top: 4.2rem;
+        max-height: unset;
     }
 }

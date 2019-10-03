@@ -11,7 +11,11 @@
 @import 'responsive';
 * {
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {

@@ -19,3 +19,44 @@
         margin-top: 0.3rem;
     }
 }
+
+.text-ellipsis {
+    display: -webkit-box;
+    height: 400px;
+    line-height: 1.4;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.block-content-wrapper {
+    padding: 11.5rem 4.25rem 3.6rem;
+    -webkit-line-clamp: 7;
+}
+
+.block-header {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    font-family: $sub-header-font;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+.block-content {
+    font-family: $paragraph-font;
+    letter-spacing: 0.32px;
+    line-height: 1.6rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.block-ref {
+    display: block;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $paragraph-font;
+    &:hover {
+        color: $font-color-accent;
+    }
+}
