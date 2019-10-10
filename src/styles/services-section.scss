@@ -1,7 +1,8 @@
 .services {
-    min-height: 100vh;
+    min-height: 70vh;
     height: 100%;
     background-color: #f9fbfb;
+    padding: 5rem 0;
     @include flex-column-around();
     .services__grid {
         display: grid;

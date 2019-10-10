@@ -2,7 +2,7 @@
     color: $font-color;
     text-align: center;
     text-transform: uppercase;
-    margin: 10rem 1rem;
+    margin: 0 1rem 7rem;
     @include flex-column-center();
     .section-header__main-header {
         letter-spacing: 2.28px;
@@ -17,6 +17,58 @@
         font-family: $sub-header-font;
         font-size: 1.2rem;
         margin-top: 0.3rem;
+    }
+}
+
+.grid {
+    display: grid;
+    width: 60%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 0.5rem;
+    img {
+        width: 100%;
+    }
+}
+
+.grid__comment-container {
+    position: relative;
+    .grid__comment-block {
+        .grid__comment-header {
+            font-size: 1rem;
+            font-style: $sub-header-font;
+            color: #272727;
+            letter-spacing: 1px;
+            span {
+                font-style: italic;
+                letter-spacing: 0.45px;
+                color: #758b89;
+            }
+        }
+        .grid__comment-text {
+            font-size: 0.9rem;
+            color: rgba(0, 0, 0, 0.9);
+            letter-spacing: 0.16px;
+        }
+        padding: 9% 15%;
+        position: absolute;
+        z-index: 1;
+        bottom: 1rem;
+        width: 90%;
+        height: 50%;
+        margin: 0 5%;
+        background-color: #6df6eb;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 10%;
+            bottom: 100%;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid #6df6eb;
+            clear: both;
+        }
     }
 }
 
@@ -58,5 +110,25 @@
     font-family: $paragraph-font;
     &:hover {
         color: $font-color-accent;
+    }
+}
+
+.social {
+    svg {
+        display: inline-block;
+        margin-right: 3px;
+        cursor: pointer;
+    }
+}
+
+.map-popup {
+    width: 12rem;
+    color: $font-color;
+    font-style: $sub-header-font;
+    h1 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 0.7rem;
     }
 }

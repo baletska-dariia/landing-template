@@ -1,4 +1,10 @@
-$('.header-title').transition({
-    animation: 'pulse',
-    duration: 1000,
-});
+export const applyAnimation = (selector, animation, duration = 1000) => {
+    $(selector).transition({
+        animation: animation,
+        duration: duration,
+
+        allowRepeats: false
+    });
+}
+
+applyAnimation('.header-title', 'pulse');

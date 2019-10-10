@@ -1,0 +1,7 @@
+.team {
+    height: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 5rem 0;
+    @include flex-column-around();
+}

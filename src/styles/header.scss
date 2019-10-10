@@ -1,5 +1,6 @@
 .page-header {
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     background-color: #eff0f2f8;
     @include flex-column-around();
     .page-header__header-nav {
@@ -153,11 +154,10 @@
     @include flex-column-center();
     position: relative;
     .header-contact__button {
-        margin-top: 1rem;
         cursor: pointer;
         outline: none;
         position: absolute;
-        top: calc(50% - 7.25rem);
+        top: calc(50% - 6.25rem);
         width: 14.5rem;
         height: 3.2rem;
         border-radius: 2px;

@@ -2,6 +2,7 @@
     min-height: 100vh;
     height: 100%;
     background-color: #f8fafa;
+    padding: 5rem 0;
     @include flex-column-around();
     .about__content {
         width: 60%;
