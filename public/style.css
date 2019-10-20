@@ -907,12 +907,12 @@ template {
     border: none;
     outline: 0;
     background-color: #6eeee4;
-    box-shadow: 0 5px 5px rgba(80, 76, 76, 0.5);
-    color: #021623;
+    box-shadow: 0 5px 5px rgba(80, 76, 76, 0.685);
+    color: #0216238f;
     width: 50%;
     height: 3.3rem;
     font-style: "Montserrat", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 2.16px; }
 
 @media (min-width: 1290px) {
@@ -1026,7 +1026,9 @@ template {
     padding: 1rem; }
   .slideshow-container .slideshow-container__content .slideshow-container__text-content {
     font-size: 0.9rem;
-    height: 22rem; } }
+    height: 22rem; }
+  .input-container .form-button {
+    font-size: 0.8rem; } }
 
 * {
   box-sizing: border-box; }

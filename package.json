@@ -24,6 +24,7 @@
     "dependencies": {
         "@tomtom-international/web-sdk-maps": "^5.36.1",
         "@tomtom-international/web-sdk-services": "^5.36.1",
-        "smoothscroll-polyfill": "^0.4.4"
+        "smoothscroll-polyfill": "^0.4.4",
+        "sweetalert2": "^8.18.5"
     }
 }

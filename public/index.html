@@ -23,6 +23,7 @@
         <meta property="og:title" content="Landing page template &mdash; Dariia Baletska">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://landing-template.baletskayadariya.now.sh">
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
         <script src="./assets/fonts/fontawesome/all.min.js"></script>
@@ -240,7 +241,7 @@
                     <h2 class="section-header__sub-header">your opinion is important for us</h2>
                 </header>
                 <div class="feedback-container">
-                    <form class="feedback-container__form" method="POST">
+                    <form class="feedback-container__form" id="feedback-form">
                         <div class="input-container">
                             <lable for="name">Name *</lable>
                             <input type="text" id="name" required/>

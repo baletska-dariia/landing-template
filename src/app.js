@@ -1,5 +1,6 @@
 import './styles/normalize.scss'
 import './styles/base.scss'
 import './js/animations'
+import './js/feedback'
 import './js/handlers'
 import './js/map'
