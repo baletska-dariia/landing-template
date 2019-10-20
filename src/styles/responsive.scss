@@ -68,9 +68,13 @@
                                 }
                                 .feedback-container {
                                     width: 100%;
-                                    .feedback-container__contact-info {
+                                    .feedback-container__contact-info{
                                         width: 90%;
                                         margin: 0 auto;
+                                    }
+                                    .feedback-container__form {
+                                        width: 90%;
+                                        margin: 3rem auto;
                                     }
                                 }
                             }

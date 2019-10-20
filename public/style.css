@@ -842,6 +842,15 @@ template {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap; }
+  .feedback-container .feedback-container__form {
+    background-color: #02162385;
+    height: 29rem;
+    width: 50%;
+    padding: 3% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
   .feedback-container .feedback-container__contact-info {
     display: flex;
     flex-direction: column;
@@ -867,6 +876,44 @@ template {
       height: 55%;
       width: 90%;
       margin: 0 auto; }
+
+.input-container {
+  width: 80%; }
+  .input-container lable {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Raleway", sans-serif;
+    line-height: 2rem; }
+  .input-container input:-webkit-autofill,
+  .input-container input:-webkit-autofill:hover,
+  .input-container input:-webkit-autofill:focus,
+  .input-container input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.6) !important; }
+  .input-container input,
+  .input-container textarea {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.6);
+    background: transparent;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: rgba(255, 255, 255, 0.5); }
+  .input-container textarea {
+    resize: none; }
+  .input-container .form-button {
+    cursor: pointer;
+    text-transform: uppercase;
+    align-self: flex-start;
+    border: none;
+    outline: 0;
+    background-color: #6eeee4;
+    box-shadow: 0 5px 5px rgba(80, 76, 76, 0.5);
+    color: #021623;
+    width: 50%;
+    height: 3.3rem;
+    font-style: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 2.16px; }
 
 @media (min-width: 1290px) {
   .grid__comment-container .grid__comment-block {
@@ -922,7 +969,10 @@ template {
     width: 100%; }
     .feedback-container .feedback-container__contact-info {
       width: 90%;
-      margin: 0 auto; } }
+      margin: 0 auto; }
+    .feedback-container .feedback-container__form {
+      width: 90%;
+      margin: 3rem auto; } }
 
 @media (max-width: 922px) {
   .block-ref {

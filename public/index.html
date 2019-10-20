@@ -240,7 +240,31 @@
                     <h2 class="section-header__sub-header">your opinion is important for us</h2>
                 </header>
                 <div class="feedback-container">
-                    <form class="feedback-container__form" method="POST"></form>
+                    <form class="feedback-container__form" method="POST">
+                        <div class="input-container">
+                            <lable for="name">Name *</lable>
+                            <input type="text" id="name" required/>
+
+                        </div>
+                        <div class="input-container">
+                            <lable for="subject">Subject </lable>
+                            <input type="text" id="subject" />
+
+                        </div>
+                        <div class="input-container">
+                            <lable for="email">Email *</lable>
+                            <input type="email" id="email" required/>
+
+                        </div>
+                        <div class="input-container">
+                            <lable for="message">Message *</lable>
+                            <textarea id="message" rows="5" required></textarea>
+
+                        </div>
+                        <div class="input-container">
+                            <button class="form-button" type="submit">send message</button>
+                        </div>
+                    </form>
                     <div class="feedback-container__contact-info">
                         <div class="feedback-container__text-info">
                             <p>
