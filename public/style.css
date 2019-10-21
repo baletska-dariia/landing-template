@@ -1067,7 +1067,14 @@ template {
     background-color: #8a8a8a3f;
     font-size: 1.5rem; }
     .page-footer .page-footer__social a, .page-footer .page-footer__social_bg-blue a {
-      color: rgba(255, 255, 255, 0.664); }
+      color: rgba(255, 255, 255, 0.664);
+      height: 100%;
+      width: 100%;
+      text-align: center; }
+      .page-footer .page-footer__social a svg, .page-footer .page-footer__social_bg-blue a svg {
+        height: 100%;
+        vertical-align: middle;
+        display: inline-block; }
   .page-footer .page-footer__social_bg-blue {
     background-color: #71f6eb;
     opacity: 1; }
