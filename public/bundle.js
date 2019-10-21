@@ -3026,9 +3026,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/base.scss */ "./src/styles/base.scss");
 /* harmony import */ var _styles_base_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_base_scss__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _js_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/animations */ "./src/js/animations.js");
-/* harmony import */ var _js_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/feedback */ "./src/js/feedback.js");
-/* harmony import */ var _js_handlers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/handlers */ "./src/js/handlers.js");
-/* harmony import */ var _js_map__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/map */ "./src/js/map.js");
+/* harmony import */ var _js_lazy_load__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/lazy-load */ "./src/js/lazy-load.js");
+/* harmony import */ var _js_lazy_load__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_lazy_load__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _js_feedback__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/feedback */ "./src/js/feedback.js");
+/* harmony import */ var _js_handlers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/handlers */ "./src/js/handlers.js");
+/* harmony import */ var _js_map__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/map */ "./src/js/map.js");
+
 
 
 
@@ -3265,6 +3268,30 @@ prevSlideButton.addEventListener('click', () => {
     clearInterval(interval);
     slider.showPrev();
 });
+
+/***/ }),
+
+/***/ "./src/js/lazy-load.js":
+/*!*****************************!*\
+  !*** ./src/js/lazy-load.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+let imageObserver = new IntersectionObserver((images) => {
+    console.log('here');
+    [...images].forEach(image => {
+        if (image.isIntersecting) {
+            imageObserver.unobserve(image.target);
+            const lazyImage = image.target;
+            lazyImage.src = lazyImage.dataset.src;
+        }
+    })
+});
+
+
+const images = document.getElementsByTagName('img');
+[...images].forEach(image => imageObserver.observe(image))
 
 /***/ }),
 
