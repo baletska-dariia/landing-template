@@ -1,23 +1,56 @@
 import Swal from 'sweetalert2';
 
-const feedbackForm = document.getElementById('feedback-form');
 
-feedbackForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log('here');
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "dreaming1806@gmail.com",
-        Password: "e0b80c60-9a3e-43f4-9ad8-461e21558bba",
-        To: 'baletskaya.dariya@gmail.com',
-        From: "dreaming1806@gmail.com",
-        Subject: "This is the subject",
-        Body: "And this is the body"
-    }).then(
-        Swal.fire(
-            'Success!',
-            'Your feedback has been sent!',
-            'success'
-        )
+const showSuccessAlert = () => {
+    Swal.fire(
+        'Success!',
+        'Your feedback has been sent!',
+        'success'
     );
-})
+}
+
+
+const showFailureAlert = (message) => {
+    Swal.fire(
+        'Oops..!',
+        message,
+        'error'
+    );
+
+}
+
+const sendMail = async(postData) => {
+    return await Email.send({
+        Host: process.env.MAIL_HOST,
+        Username: process.env.MAIL_USERNAME,
+        Password: process.env.MAIL_PASSWORD,
+        To: postData.receiver,
+        From: postData.adressant,
+        Subject: postData.subject,
+        Body: postData.body
+    })
+}
+
+const getPostData = (emailId, subjectId, bodyId) => {
+    return {
+        receiver: "baletskaya.dariya@gmail.com",
+        adressant: document.getElementById(emailId).value,
+        subject: document.getElementById(subjectId).value,
+        body: document.getElementById(bodyId).value
+    }
+}
+const EMAIL_ID = 'form-email';
+const SUBJECT_ID = 'form-subject';
+const BODY_ID = 'form-message';
+
+const feedbackForm = document.getElementById('feedback-form')
+    .addEventListener('submit', (e) => {
+        e.preventDefault();
+        sendMail(getPostData(EMAIL_ID, SUBJECT_ID, BODY_ID))
+            .then(() =>
+                showSuccessAlert()
+
+            ).catch(err => showFailureAlert(err.message));
+
+
+    });

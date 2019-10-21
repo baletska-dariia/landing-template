@@ -13,7 +13,7 @@ window.addEventListener('scroll', () => {
         scrollButton.style.display = 'none'
 })
 const contactBtn = document.getElementById('contact-us');
-contactBtn.addEventListener('click', () => location.replace('#about'));
+contactBtn.addEventListener('click', () => location.replace('#contacts'));
 
 const setupSlides = () => {
     let index = 0;

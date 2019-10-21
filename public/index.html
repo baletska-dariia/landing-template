@@ -61,12 +61,12 @@
                             <span></span>
 
                             <ul class="header-menu__menu-content">
-                                <li><a href="">ABOUT US</a></li>
-                                <li><a href="">FEATURED WORKS</a></li>
-                                <li><a href="">OUR SERVICES</a></li>
-                                <li><a href="">SMALL TEAM</a></li>
-                                <li><a href="">WHAT THEY SAYS</a></li>
-                                <li><a href="">CONTACTS</a></li>
+                                <li><a href="#about">ABOUT US</a></li>
+                                <li><a href="#features">FEATURED WORKS</a></li>
+                                <li><a href="#services">OUR SERVICES</a></li>
+                                <li><a href="#team">SMALL TEAM</a></li>
+                                <li><a href="#slides">WHAT THEY SAYS</a></li>
+                                <li><a href="#contacts">CONTACTS</a></li>
                             </ul>
                         </div>
 
@@ -103,7 +103,7 @@
                     </div>
                 </div>
             </section>
-            <section class="features">
+            <section class="features" id="features">
                 <header class="section-header">
                     <h2 class="section-header__main-header">featured works</h2>
                     <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
@@ -117,7 +117,7 @@
                     <img alt="feature" src="./assets/features/6.jpg" />
                 </div>
             </section>
-            <section class="services">
+            <section class="services" id="services">
                 <header class="section-header">
                     <h2 class="section-header__main-header">our services</h2>
                     <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
@@ -172,7 +172,7 @@
                     </div>
                 </div>
             </section>
-            <section class="team">
+            <section class="team" id="team">
                 <header class="section-header">
                     <h2 class="section-header__main-header">small team</h2>
                     <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
@@ -198,7 +198,7 @@
                     <img alt="feature" src="./assets/team/1.jpg" />
                 </div>
             </section>
-            <section class="slider-section">
+            <section class="slider-section" id="slides">
                 <header class="section-header">
                     <h2 class="section-header__main-header">what they says</h2>
                     <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
@@ -235,7 +235,7 @@
                     </div>
                 </div>
             </section>
-            <section class="feedback-section">
+            <section class="feedback-section" id="contacts">
                 <header class="section-header">
                     <h2 class="section-header__main-header">send us feedback</h2>
                     <h2 class="section-header__sub-header">your opinion is important for us</h2>
@@ -249,17 +249,17 @@
                         </div>
                         <div class="input-container">
                             <lable for="subject">Subject </lable>
-                            <input type="text" id="subject" />
+                            <input type="text" id="form-subject" />
 
                         </div>
                         <div class="input-container">
                             <lable for="email">Email *</lable>
-                            <input type="email" id="email" required/>
+                            <input type="email" id="form-email" required/>
 
                         </div>
                         <div class="input-container">
                             <lable for="message">Message *</lable>
-                            <textarea id="message" rows="5" required></textarea>
+                            <textarea id="form-message" rows="5" required></textarea>
 
                         </div>
                         <div class="input-container">
@@ -285,7 +285,18 @@
                     </div>
                 </div>
             </section>
+            <footer class="page-footer">
+                <h1>Follow us</h1>
+                <div class="page-footer__social-container">
+                    <div class="page-footer__social_bg-blue"><i class="fab fa-pinterest-p"></i></div>
+                    <div class="page-footer__social"><i class="fab fa-twitter"></i></div>
+                    <div class="page-footer__social"><i class="fab fa-facebook-f"></i></div>
+                    <div class="page-footer__social"><i class="fab fa-dribbble"></i></div>
+                </div>
+                <h2>Copyright &copy; Masum Parvej, All Rights Reserved</h2>
+            </footer>
         </div>
+
     </body>
 
 </html>
