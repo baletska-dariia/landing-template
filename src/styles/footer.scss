@@ -30,12 +30,16 @@
         margin: 0 3px;
         background-color: #8a8a8a3f;
         font-size: 1.5rem;
-        color: rgba(255, 255, 255, 0.664);
+        a {
+            color: rgba(255, 255, 255, 0.664);
+        }
     }
     .page-footer__social_bg-blue {
         @extend .page-footer__social;
         background-color: #71f6eb;
         opacity: 1;
-        color: #000;
+        a {
+            color: #000;
+        }
     }
 }
