@@ -879,7 +879,7 @@ template {
 
 .input-container {
   width: 80%; }
-  .input-container lable {
+  .input-container label {
     display: block;
     color: rgba(255, 255, 255, 0.6);
     font-family: "Raleway", sans-serif;
