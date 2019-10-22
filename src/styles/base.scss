@@ -29,13 +29,15 @@ body {
 }
 
 #scroll-button {
-    display: none;
+    transition: transform 0.5s ease-out;
+    display: block;
+    opacity: 0;
     cursor: pointer;
     height: 4rem;
     width: 4rem;
     position: fixed;
     z-index: 3;
-    bottom: 2rem;
+    bottom: 0;
     right: 3rem;
     color: $font-color;
     background-color: $font-color-accent;

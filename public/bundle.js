@@ -3267,10 +3267,10 @@ const scrollContainer = document.getElementById('scroll-container');
 const topButtonObserver = new IntersectionObserver((entries) => {
     [...entries].forEach(entry => {
         if (entry.intersectionRatio > 0) {
-            scrollButton.style.display = 'block';
-            Object(_animations__WEBPACK_IMPORTED_MODULE_0__["applyAnimation"])('#scroll-button', 'bounce');
+            scrollButton.style.opacity = 1;
+            scrollButton.style.transform = 'translateY(-3rem)';
         } else {
-            scrollButton.style.display = 'none';
+            scrollButton.style.transform = 'translateY(4rem)';
         }
     })
 
