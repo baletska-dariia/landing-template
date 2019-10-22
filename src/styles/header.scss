@@ -17,7 +17,6 @@
     @include flex-row-center();
     .header-logo__logo-content {
         font-family: $header-font;
-        text-shadow: 0 0 2px rgba(21, 21, 22, 0.75);
         font-size: 1rem;
         letter-spacing: 1.02px;
         text-align: center;
@@ -27,7 +26,6 @@
             color: $font-color-accent;
             font-size: 1.3rem;
             letter-spacing: 1.26px;
-            text-shadow: none;
         }
     }
 }
@@ -60,7 +58,7 @@
             background: $font-color;
             border-radius: 3px;
             z-index: 1;
-            transform-origin: 4px 0px;
+            transform-origin: 4px 0;
             transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
         }
     }
@@ -101,8 +99,8 @@
         top: -2.5rem;
         text-align: center;
         width: 15rem;
-        padding: 2rem;
-        padding-top: 7rem;
+        padding: 4rem 2rem 1.3rem;
+        padding-top: 4rem;
         background: #ededede8;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }

@@ -1,3 +1,5 @@
+import { applyAnimation } from './animations';
+
 const imageObserver = new IntersectionObserver((images) => {
     [...images].forEach(image => {
         if (image.isIntersecting) {
@@ -17,8 +19,8 @@ const scrollContainer = document.getElementById('scroll-container');
 const topButtonObserver = new IntersectionObserver((entries) => {
     [...entries].forEach(entry => {
         if (entry.intersectionRatio > 0) {
-
             scrollButton.style.display = 'block';
+            applyAnimation('#scroll-button', 'bounce');
         } else {
             scrollButton.style.display = 'none';
         }

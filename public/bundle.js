@@ -3028,7 +3028,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/animations */ "./src/js/animations.js");
 /* harmony import */ var _js_slideshow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/slideshow */ "./src/js/slideshow.js");
 /* harmony import */ var _js_observers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/observers */ "./src/js/observers.js");
-/* harmony import */ var _js_observers__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_observers__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _js_feedback__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/feedback */ "./src/js/feedback.js");
 /* harmony import */ var _js_handlers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/handlers */ "./src/js/handlers.js");
 /* harmony import */ var _js_handlers__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_handlers__WEBPACK_IMPORTED_MODULE_6__);
@@ -3058,7 +3057,6 @@ const applyAnimation = (selector, animation, duration = 1000) => {
     $(selector).transition({
         animation: animation,
         duration: duration,
-
         allowRepeats: false
     });
 }
@@ -3206,7 +3204,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _maps_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_maps_min__WEBPACK_IMPORTED_MODULE_0__);
 
 
-_maps_min__WEBPACK_IMPORTED_MODULE_0___default.a.setProductInfo('My First App', '0.0.1');
+
 const map = _maps_min__WEBPACK_IMPORTED_MODULE_0___default.a.map({
     key: 'pkwmphAa6FpNfsMxpKhEwvJwjCLDeMFG',
     container: 'map',
@@ -3219,7 +3217,7 @@ const map = _maps_min__WEBPACK_IMPORTED_MODULE_0___default.a.map({
 
 
 
-var popup = new _maps_min__WEBPACK_IMPORTED_MODULE_0___default.a.Popup({ className: 'map-popup' })
+let popup = new _maps_min__WEBPACK_IMPORTED_MODULE_0___default.a.Popup({ className: 'map-popup' })
     .setLngLat({ lng: -117.98, lat: 35.12 })
     .setHTML("<h1>Shopno LLC</h1><p>4350 Westown Pkwy, West Des MoinesIA 50266, USA</p> <p>+156456 54546</p>")
     .addTo(map);
@@ -3242,8 +3240,13 @@ var popup = new _maps_min__WEBPACK_IMPORTED_MODULE_0___default.a.Popup({ classNa
 /*!*****************************!*\
   !*** ./src/js/observers.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _animations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./animations */ "./src/js/animations.js");
+
 
 const imageObserver = new IntersectionObserver((images) => {
     [...images].forEach(image => {
@@ -3264,8 +3267,8 @@ const scrollContainer = document.getElementById('scroll-container');
 const topButtonObserver = new IntersectionObserver((entries) => {
     [...entries].forEach(entry => {
         if (entry.intersectionRatio > 0) {
-
             scrollButton.style.display = 'block';
+            Object(_animations__WEBPACK_IMPORTED_MODULE_0__["applyAnimation"])('#scroll-button', 'bounce');
         } else {
             scrollButton.style.display = 'none';
         }
