@@ -23,11 +23,11 @@
         <meta property="og:title" content="Landing page template &mdash; Dariia Baletska">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://landing-template.baletskayadariya.now.sh">
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script defer src="bundle.js"></script>
+        <script src="./assets/fonts/fontawesome/all.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-        <script src="./assets/fonts/fontawesome/all.min.js"></script>
-        <script defer src="bundle.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <link rel="me" href="baletskaya.dariya@gmail.com">
         <link rel="me" href="https://github.com/baletska-dariia">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
@@ -40,14 +40,7 @@
 
     <body>
         <div class="page" id="page-start">
-            <button class="page__scroll-button" id="scroll-button"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 612.002 612.002">
-	<g>
-		<path d="M592.639,358.376L423.706,189.439c-64.904-64.892-170.509-64.892-235.421,0.005L19.363,358.379
-			c-25.817,25.817-25.817,67.674,0,93.489c25.817,25.817,67.679,25.819,93.491-0.002l168.92-168.927
-			c13.354-13.357,35.092-13.361,48.444-0.005l168.93,168.932c12.91,12.907,29.825,19.365,46.747,19.365
-			c16.915,0,33.835-6.455,46.747-19.365C618.456,426.051,618.456,384.193,592.639,358.376z"/>
-	</g></svg></button>
+
             <header class="page-header">
                 <div class="page-header__header-nav">
                     <div class="header-logo">
@@ -83,7 +76,9 @@
                     <button class="header-contact__button" id="contact-us">Contact us</button>
                 </div>
             </header>
+
             <section class="about" id="about">
+
                 <header class="section-header">
                     <h2 class="section-header__main-header">ABOUT US</h2>
                     <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
@@ -91,7 +86,7 @@
                 <div class="about__content">
                     <div class="about__image-content">
                         <div class="about__image-outline"></div>
-                        <div class="about__image"> <img alt=" about us " data-src="./assets/about_us.jpg " /></div>
+                        <div class="about__image"> <img alt="about us" src="./assets/about_us_blurred.jpg" data-src="./assets/about_us.jpg " /></div>
                     </div>
                     <div class="about__text-content ">
                         <h2>We Actually Do amazing works</h2>
@@ -103,200 +98,212 @@
                     </div>
                 </div>
             </section>
-            <section class="features" id="features">
-                <header class="section-header">
-                    <h2 class="section-header__main-header">featured works</h2>
-                    <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
-                </header>
-                <div class="grid">
-                    <img alt="feature" data-src="./assets/features/1.jpg" />
-                    <img alt="feature" data-src="./assets/features/2.jpg" />
-                    <img alt="feature" data-src="./assets/features/3.jpg" />
-                    <img alt="feature" data-src="./assets/features/4.jpg" />
-                    <img alt="feature" data-src="./assets/features/5.jpg" />
-                    <img alt="feature" data-src="./assets/features/6.jpg" />
-                </div>
-            </section>
-            <section class="services" id="services">
-                <header class="section-header">
-                    <h2 class="section-header__main-header">our services</h2>
-                    <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
-                </header>
-                <div class="services__grid">
-                    <div class="services__block_wide_blue">
-                        <div class="services__text-content_black ">
-                            <h2>Designing is The CooL LOVE FOR.</h2>
-                            <p class="text-ellipsis">Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most this job was posted less than five minutes ago, and we think it’s a good match for you. If you submit a proposal
-                                now, you’ll be one of the first candidates. You may even catch the client while they’re still online.</p>
-                        </div>
+            <div id="scroll-container">
+                <button id="scroll-button">
+                    <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                    viewBox="0 0 612.002 612.002">
+                        <g>
+                            <path d="M592.639,358.376L423.706,189.439c-64.904-64.892-170.509-64.892-235.421,0.005L19.363,358.379
+                                c-25.817,25.817-25.817,67.674,0,93.489c25.817,25.817,67.679,25.819,93.491-0.002l168.92-168.927
+                                c13.354-13.357,35.092-13.361,48.444-0.005l168.93,168.932c12.91,12.907,29.825,19.365,46.747,19.365
+                                c16.915,0,33.835-6.455,46.747-19.365C618.456,426.051,618.456,384.193,592.639,358.376z"/>
+                        </g>
+                    </svg>
+                  </button>
+                <section class="features" id="features">
+                    <header class="section-header">
+                        <h2 class="section-header__main-header">featured works</h2>
+                        <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
+                    </header>
+                    <div class="grid">
+                        <img alt="feature" src="./assets/features/1_blurred.jpg" data-src="./assets/features/1.jpg" />
+                        <img alt="feature" src="./assets/features/2_blurred.jpg" data-src="./assets/features/2.jpg" />
+                        <img alt="feature" src="./assets/features/3_blurred.jpg" data-src="./assets/features/3.jpg" />
+                        <img alt="feature" src="./assets/features/4_blurred.jpg" data-src="./assets/features/4.jpg" />
+                        <img alt="feature" src="./assets/features/5_blurred.jpg" data-src="./assets/features/5.jpg" />
+                        <img alt="feature" src="./assets/features/6_blurred.jpg" data-src="./assets/features/6.jpg" />
                     </div>
-                    <div class="services__block_narrow_left" id="bg1">
-                        <div class="block-content-wrapper text-ellipsis">
-                            <h2 class="block-header">cool psd Design</h2>
-                            <p class="block-content">Our most popular service is our we know that sometimes it’s something and you middle most.</p>
-                            <a class="block-ref" href=" # ">Know More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22 " height="14 " viewBox="0 0 22 14 "><g><g opacity=".7 "><path fill="#fff " d="M13.95-.087l6.771 6.085H21v.25l.387.349-.387.43v.97h-.633l-6.996 6-.686-.727-.685-.728 5.297-4.544H0v-2h17.73l-5.118-4.597.669-.745z "/>
-                                </g></g></svg></a>
-                        </div>
-                    </div>
-                    <div class="services__block_wide_left" id="bg2">
-                        <div class="block-content-wrapper text-ellipsis">
-                            <h2 class="block-header">Designing is The Cool</h2>
-                            <p class="block-content">Our most popular service is our Virtual Receptionist. We know that.</p>
-                            <a class="block-ref" href=" # ">Know More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22 " height="14 " viewBox="0 0 22 14 "><g><g opacity=".7 "><path fill="#fff " d="M13.95-.087l6.771 6.085H21v.25l.387.349-.387.43v.97h-.633l-6.996 6-.686-.727-.685-.728 5.297-4.544H0v-2h17.73l-5.118-4.597.669-.745z "/>
-                                </g></g></svg></a>
-                        </div>
-                    </div>
-                    <div class="services__block_narrow_left" id="bg3">
-                        <div class="block-content-wrapper text-ellipsis">
-                            <h2 class="block-header">PSD TO HTML KORI</h2>
-                            <p class="block-content">We know that sometimes it’s something and you middle most.</p>
-                            <a class="block-ref" href=" # ">Know More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22 " height="14 " viewBox="0 0 22 14 "><g><g opacity=".7 "><path fill="#fff " d="M13.95-.087l6.771 6.085H21v.25l.387.349-.387.43v.97h-.633l-6.996 6-.686-.727-.685-.728 5.297-4.544H0v-2h17.73l-5.118-4.597.669-.745z "/>
-                                </g></g></svg></a>
-                        </div>
-                    </div>
-                    <div class="services__block_narrow_right" id="bg4">
-                        <div class="block-content-wrapper text-ellipsis">
-                            <h2 class="block-header">cool psd Design</h2>
-                            <p class="block-content">Our most popular service is our we know that sometimes it’s something and you middle most.</p>
-                            <a class="block-ref" href=" # ">Know More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22 " height="14 " viewBox="0 0 22 14 "><g><g opacity=".7 "><path fill="#fff " d="M13.95-.087l6.771 6.085H21v.25l.387.349-.387.43v.97h-.633l-6.996 6-.686-.727-.685-.728 5.297-4.544H0v-2h17.73l-5.118-4.597.669-.745z "/>
-                                </g></g></svg></a>
-                        </div>
-                    </div>
-                    <div class="services__block_wide_right" id="bg5">
-                        <div class="block-content-wrapper text-ellipsis">
-                            <h2 class="block-header">Designing is The Cool FOR</h2>
-                            <p class="block-content">Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most.</p>
-                            <a class="block-ref" href=" # ">Know More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22 " height="14 " viewBox="0 0 22 14 "><g><g opacity=".7 "><path fill="#fff " d="M13.95-.087l6.771 6.085H21v.25l.387.349-.387.43v.97h-.633l-6.996 6-.686-.727-.685-.728 5.297-4.544H0v-2h17.73l-5.118-4.597.669-.745z "/>
-                                </g></g></svg></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="team" id="team">
-                <header class="section-header">
-                    <h2 class="section-header__main-header">small team</h2>
-                    <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
-                </header>
-                <div class="grid">
-                    <img alt="feature" data-src="./assets/team/1.jpg" />
-                    <div class="grid__comment-container">
-                        <div class="grid__comment-block">
-                            <h2 class="grid__comment-header">AL RAYHAN <span>/ UI Designer</span></h2>
-                            <p class="grid__comment-text">Lorem Ipsum is not simply is an action designer random text It has roots in a piece. </p>
-                            <div class="social">
-                                <i class="fab fa-instagram"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook"></i>
-                                <i class="far fa-envelope"></i>
+                </section>
+                <section class="services" id="services">
+                    <header class="section-header">
+                        <h2 class="section-header__main-header">our services</h2>
+                        <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
+                    </header>
+                    <div class="services__grid">
+                        <div class="services__block_wide_blue">
+                            <div class="services__text-content_black ">
+                                <h2>Designing is The CooL LOVE FOR.</h2>
+                                <p class="text-ellipsis">Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most this job was posted less than five minutes ago, and we think it’s a good match for you. If you submit a proposal
+                                    now, you’ll be one of the first candidates. You may even catch the client while they’re still online.</p>
                             </div>
+                        </div>
+                        <div class="services__block_narrow_left" id="bg1">
+                            <div class="block-content-wrapper text-ellipsis">
+                                <h2 class="block-header">cool psd Design</h2>
+                                <p class="block-content">Our most popular service is our we know that sometimes it’s something and you middle most.</p>
+                                <a class="block-ref" href=" # ">Know More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22 " height="14 " viewBox="0 0 22 14 "><g><g opacity=".7 "><path fill="#fff " d="M13.95-.087l6.771 6.085H21v.25l.387.349-.387.43v.97h-.633l-6.996 6-.686-.727-.685-.728 5.297-4.544H0v-2h17.73l-5.118-4.597.669-.745z "/>
+                                </g></g></svg></a>
+                            </div>
+                        </div>
+                        <div class="services__block_wide_left" id="bg2">
+                            <div class="block-content-wrapper text-ellipsis">
+                                <h2 class="block-header">Designing is The Cool</h2>
+                                <p class="block-content">Our most popular service is our Virtual Receptionist. We know that.</p>
+                                <a class="block-ref" href=" # ">Know More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22 " height="14 " viewBox="0 0 22 14 "><g><g opacity=".7 "><path fill="#fff " d="M13.95-.087l6.771 6.085H21v.25l.387.349-.387.43v.97h-.633l-6.996 6-.686-.727-.685-.728 5.297-4.544H0v-2h17.73l-5.118-4.597.669-.745z "/>
+                                </g></g></svg></a>
+                            </div>
+                        </div>
+                        <div class="services__block_narrow_left" id="bg3">
+                            <div class="block-content-wrapper text-ellipsis">
+                                <h2 class="block-header">PSD TO HTML KORI</h2>
+                                <p class="block-content">We know that sometimes it’s something and you middle most.</p>
+                                <a class="block-ref" href=" # ">Know More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22 " height="14 " viewBox="0 0 22 14 "><g><g opacity=".7 "><path fill="#fff " d="M13.95-.087l6.771 6.085H21v.25l.387.349-.387.43v.97h-.633l-6.996 6-.686-.727-.685-.728 5.297-4.544H0v-2h17.73l-5.118-4.597.669-.745z "/>
+                                </g></g></svg></a>
+                            </div>
+                        </div>
+                        <div class="services__block_narrow_right" id="bg4">
+                            <div class="block-content-wrapper text-ellipsis">
+                                <h2 class="block-header">cool psd Design</h2>
+                                <p class="block-content">Our most popular service is our we know that sometimes it’s something and you middle most.</p>
+                                <a class="block-ref" href=" # ">Know More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22 " height="14 " viewBox="0 0 22 14 "><g><g opacity=".7 "><path fill="#fff " d="M13.95-.087l6.771 6.085H21v.25l.387.349-.387.43v.97h-.633l-6.996 6-.686-.727-.685-.728 5.297-4.544H0v-2h17.73l-5.118-4.597.669-.745z "/>
+                                </g></g></svg></a>
+                            </div>
+                        </div>
+                        <div class="services__block_wide_right" id="bg5">
+                            <div class="block-content-wrapper text-ellipsis">
+                                <h2 class="block-header">Designing is The Cool FOR</h2>
+                                <p class="block-content">Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most.</p>
+                                <a class="block-ref" href=" # ">Know More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22 " height="14 " viewBox="0 0 22 14 "><g><g opacity=".7 "><path fill="#fff " d="M13.95-.087l6.771 6.085H21v.25l.387.349-.387.43v.97h-.633l-6.996 6-.686-.727-.685-.728 5.297-4.544H0v-2h17.73l-5.118-4.597.669-.745z "/>
+                                </g></g></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="team" id="team">
+                    <header class="section-header">
+                        <h2 class="section-header__main-header">small team</h2>
+                        <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
+                    </header>
+                    <div class="grid">
+                        <img alt="feature" data-src="./assets/team/1.jpg" />
+                        <div class="grid__comment-container">
+                            <div class="grid__comment-block">
+                                <h2 class="grid__comment-header">AL RAYHAN <span>/ UI Designer</span></h2>
+                                <p class="grid__comment-text">Lorem Ipsum is not simply is an action designer random text It has roots in a piece. </p>
+                                <div class="social">
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-facebook"></i>
+                                    <i class="far fa-envelope"></i>
+                                </div>
 
-                        </div><img alt="feature" data-src="./assets/team/2.jpg" />
-                    </div>
-                    <img alt="feature" data-src="./assets/team/3.jpg" />
-                    <img alt="feature" data-src="./assets/team/4.jpg" />
-                    <img alt="feature" data-src="./assets/team/5.jpg" />
-                    <img alt="feature" data-src="./assets/team/1.jpg" />
-                </div>
-            </section>
-            <section class="slider-section" id="slides">
-                <header class="section-header">
-                    <h2 class="section-header__main-header">what they says</h2>
-                    <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
-                </header>
-
-                <div class="slideshow-container">
-                    <div class="slideshow-container__content">
-                        <div class="slideshow-container__image-content">
-                            <div class="slideshow-container__image-outline"></div>
-                            <div class="slideshow-container__image"> <img id="comment-image" alt="about us" data-src="./assets/team/3.jpg" />
-                            </div>
-                            <div class="slideshow-container__dots">
-                                <div class="dot dot_active"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
+                            </div><img alt="team" src="./assets/team/2_blurred.jpg" data-src="./assets/team/2.jpg" />
                         </div>
-                        <div class="slideshow-container__text-content">
-                            <div id="prev-slide"><i class="fas fa-angle-left nav-arrow-left"></i></div>
-                            <div id="next-slide"><i class="fas fa-angle-right nav-arrow-right"></i></div>
-                            <div>
-                                <h2 id="comment-name">AL RAYHAN / <span>UI/UX DESIGNER</span></h2>
-                                <p id="comment-text">Lorem Ipsum is simply dummy text of the printing and you standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                        <img alt="team" src="./assets/team/3_blurred.jpg" data-src="./assets/team/3.jpg" />
+                        <img alt="team" src="./assets/team/4_blurred.jpg" data-src="./assets/team/4.jpg" />
+                        <img alt="team" src="./assets/team/5_blurred.jpg" data-src="./assets/team/5.jpg" />
+                        <img alt="team" src="./assets/team/1_blurred.jpg" data-src="./assets/team/1.jpg" />
+                    </div>
+                </section>
+                <section class="slider-section" id="slides">
+                    <header class="section-header">
+                        <h2 class="section-header__main-header">what they says</h2>
+                        <h2 class="section-header__sub-header">Lorem ipsum dolor sit amet event landing template</h2>
+                    </header>
+
+                    <div class="slideshow-container">
+                        <div class="slideshow-container__content">
+                            <div class="slideshow-container__image-content">
+                                <div class="slideshow-container__image-outline"></div>
+                                <div class="slideshow-container__image"> <img id="comment-image" alt="about us" data-src="./assets/team/3.jpg" />
+                                </div>
+                                <div class="slideshow-container__dots">
+                                    <div class="dot dot_active"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                            <div class="slideshow-container__text-content">
+                                <div id="prev-slide"><i class="fas fa-angle-left nav-arrow-left"></i></div>
+                                <div id="next-slide"><i class="fas fa-angle-right nav-arrow-right"></i></div>
+                                <div>
+                                    <h2 id="comment-name">AL RAYHAN / <span>UI/UX DESIGNER</span></h2>
+                                    <p id="comment-text">Lorem Ipsum is simply dummy text of the printing and you standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="feedback-section" id="contacts">
-                <header class="section-header">
-                    <h2 class="section-header__main-header">send us feedback</h2>
-                    <h2 class="section-header__sub-header">your opinion is important for us</h2>
-                </header>
-                <div class="feedback-container">
-                    <form class="feedback-container__form" id="feedback-form">
-                        <div class="input-container">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" required/>
+                </section>
+                <section class="feedback-section" id="contacts">
+                    <header class="section-header">
+                        <h2 class="section-header__main-header">send us feedback</h2>
+                        <h2 class="section-header__sub-header">your opinion is important for us</h2>
+                    </header>
+                    <div class="feedback-container">
+                        <form class="feedback-container__form" id="feedback-form">
+                            <div class="input-container">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" required/>
 
-                        </div>
-                        <div class="input-container">
-                            <label for="form-subject">Subject </label>
-                            <input type="text" id="form-subject" />
+                            </div>
+                            <div class="input-container">
+                                <label for="form-subject">Subject </label>
+                                <input type="text" id="form-subject" />
 
-                        </div>
-                        <div class="input-container">
-                            <label for="form-email">Email *</label>
-                            <input type="email" id="form-email" required/>
+                            </div>
+                            <div class="input-container">
+                                <label for="form-email">Email *</label>
+                                <input type="email" id="form-email" required/>
 
-                        </div>
-                        <div class="input-container">
-                            <label for="form-message">Message *</label>
-                            <textarea id="form-message" rows="5" required></textarea>
+                            </div>
+                            <div class="input-container">
+                                <label for="form-message">Message *</label>
+                                <textarea id="form-message" rows="5" required></textarea>
 
-                        </div>
-                        <div class="input-container">
-                            <button class="form-button" type="submit">send message</button>
-                        </div>
-                    </form>
-                    <div class="feedback-container__contact-info">
-                        <div class="feedback-container__text-info">
-                            <p>
-                                <span>4350 Westown Pkwy, West Des Moines</span>
-                                <span>IA 50266, USA</span>
-                                <span>Phone: +548 945645</span>
-                                <span>Fax: +456456 54546</span>
-                            </p>
-                            <p>
-                                <span>Web: www.designagency.net</span>
-                                <span>E-mail: info@designagency.net</span>
+                            </div>
+                            <div class="input-container">
+                                <button class="form-button" type="submit">send message</button>
+                            </div>
+                        </form>
+                        <div class="feedback-container__contact-info">
+                            <div class="feedback-container__text-info">
+                                <p>
+                                    <span>4350 Westown Pkwy, West Des Moines</span>
+                                    <span>IA 50266, USA</span>
+                                    <span>Phone: +548 945645</span>
+                                    <span>Fax: +456456 54546</span>
+                                </p>
+                                <p>
+                                    <span>Web: www.designagency.net</span>
+                                    <span>E-mail: info@designagency.net</span>
 
-                            </p>
-                        </div>
+                                </p>
+                            </div>
 
-                        <div id='map' class='map'></div>
+                            <div id='map' class='map'></div>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <footer class="page-footer">
-                <h1>Follow us</h1>
-                <div class="page-footer__social-container">
-                    <div class="page-footer__social_bg-blue"><a href="https://www.instagram.com/dariy_a/" target="_blank"><i class="fab fa-instagram"></i></a></div>
-                    <div class="page-footer__social"><a href="https://www.linkedin.com/in/dariya-baletskaya-003117189/" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
-                    <div class="page-footer__social"><a href="https://github.com/baletska-dariia" target="_blank"><i class="fab fa-github" ></i></a></div>
-                    <div class="page-footer__social"><a href="https://www.facebook.com/dariya.baletskaya" target="_blank"><i class="fab fa-facebook-f" ></i></a></div>
-                </div>
-                <h2>Copyright &copy; Dariia Baletska, All Rights Reserved</h2>
-            </footer>
+                </section>
+                <footer class="page-footer">
+                    <h1>Follow us</h1>
+                    <div class="page-footer__social-container">
+                        <div class="page-footer__social_bg-blue"><a href="https://www.instagram.com/dariy_a/" target="_blank"><i class="fab fa-instagram"></i></a></div>
+                        <div class="page-footer__social"><a href="https://www.linkedin.com/in/dariya-baletskaya-003117189/" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
+                        <div class="page-footer__social"><a href="https://github.com/baletska-dariia" target="_blank"><i class="fab fa-github" ></i></a></div>
+                        <div class="page-footer__social"><a href="https://www.facebook.com/dariya.baletskaya" target="_blank"><i class="fab fa-facebook-f" ></i></a></div>
+                    </div>
+                    <h2>Copyright &copy; Dariia Baletska, All Rights Reserved</h2>
+                </footer>
+            </div>
         </div>
-
     </body>
 
 </html>

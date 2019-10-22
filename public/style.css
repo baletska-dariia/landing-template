@@ -1093,11 +1093,11 @@ body {
   height: 100%;
   overflow-x: hidden; }
 
-.page .page__scroll-button {
+#scroll-button {
+  display: none;
   cursor: pointer;
   height: 4rem;
   width: 4rem;
-  display: none;
   position: fixed;
   z-index: 3;
   bottom: 2rem;
@@ -1107,7 +1107,7 @@ body {
   border: none;
   border-radius: 50%;
   outline: none; }
-  .page .page__scroll-button svg {
+  #scroll-button svg {
     display: block;
     height: 1.5rem;
     width: 1.5rem;
